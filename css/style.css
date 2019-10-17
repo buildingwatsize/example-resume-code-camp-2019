@@ -676,7 +676,7 @@ button:focus {
 .contact_info .info_item h6 {
   font-size: 16px;
   line-height: 24px;
-  color: "Roboto", "Prompt", sans-serif;
+  font-family: "Roboto", "Prompt", sans-serif;
   font-weight: bold;
   margin-bottom: 0px;
   color: #000000;
@@ -1715,7 +1715,8 @@ h6 {
 /* Footer Area css
 ============================================================================================ */
 .footer_area {
-  padding: 120px 0;
+  padding: 60px 0 120px 0;
+  margin-top: 60px;
   position: relative;
 }
 
@@ -1794,6 +1795,58 @@ h6 {
 /*# sourceMappingURL=style.css.map */
 
 /* ## =========== MINE =========== ## */
+
+.clickable {
+  cursor: pointer;
+}
+
+.highlightClickable {
+  color: #854fee;
+}
+
+.hoverColored:hover {
+  background-image: -webkit-linear-gradient(90deg, #4458dc 0%, #854fee 100%) !important;
+  background-image: -moz-linear-gradient(90deg, #4458dc 0%, #854fee 100%) !important;
+  background-image: -o-linear-gradient(90deg, #4458dc 0%, #854fee 100%) !important;
+  background-image: linear-gradient(90deg, #4458dc 0%, #854fee 100%) !important;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.colorful-bg {
+  background-image: -webkit-linear-gradient(90deg, #4458dc 0%, #854fee 100%) !important;
+  background-image: -moz-linear-gradient(90deg, #4458dc 0%, #854fee 100%) !important;
+  background-image: -o-linear-gradient(90deg, #4458dc 0%, #854fee 100%) !important;
+  background-image: linear-gradient(90deg, #4458dc 0%, #854fee 100%) !important;
+}
+.colorful-font {
+  color: #aaaaaa !important;
+}
+.colorful-menu {
+  background-image: -webkit-linear-gradient(90deg, #4458dc 0%, #854fee 100%) !important;
+  background-image: -moz-linear-gradient(90deg, #4458dc 0%, #854fee 100%) !important;
+  background-image: -o-linear-gradient(90deg, #4458dc 0%, #854fee 100%) !important;
+  background-image: linear-gradient(90deg, #4458dc 0%, #854fee 100%) !important;
+  color: transparent !important;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+.colorful-menu i {
+  background-image: -webkit-linear-gradient(90deg, #4458dc 0%, #854fee 100%) !important;
+  background-image: -moz-linear-gradient(90deg, #4458dc 0%, #854fee 100%) !important;
+  background-image: -o-linear-gradient(90deg, #4458dc 0%, #854fee 100%) !important;
+  background-image: linear-gradient(90deg, #4458dc 0%, #854fee 100%) !important;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+.colorful-menu-font,
+.colorful-menu-font:hover,
+.colorful-menu-font i,
+.colorful-menu-font i:hover {
+  color: #fafafa !important;
+}
 
 .justifyCenter {
   display: flex;

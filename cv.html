@@ -63,6 +63,7 @@
 								</ul>
 							</li> -->
                             <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                            <li class="nav-item"><div class="nav-link clickable colorful-menu" onclick="toggleColorfulMode()"><i class="fas fa-palette"></i>&nbsp;Colorful Mode</div></li>
                         </ul>
                     </div>
                 </div>
@@ -105,7 +106,15 @@
                 <div class="col-sm-8 pt-2 justifyStart">
                     <div class="">
                         <h4>ชื่อ-นามสกุล</h4>
-                        <p>ชื่อ-นามสกุล: นาย ชินวัฒน์ ฉิมดี <br /> ชื่อเล่น: วัฒน์ </p>
+                        <p>
+                            ชื่อ-นามสกุล:
+                                <span id="myName">นาย ชินวัฒน์ ฉิมดี</span>
+                                <i class="fas fa-edit pl-3 clickable hoverColored" onclick="promptEditField('name')"></i>
+                                <br />
+                            ชื่อเล่น:
+                                <span id="myNickname">วัฒน์</span>
+                                <i class="fas fa-edit pl-3 clickable hoverColored" onclick="promptEditField('nickname')"></i>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -250,7 +259,7 @@
             <div class="row rowMarginGutter">
                 <div class="col-12 justifyCenter">
                     <div class="progress-table-wrap">
-                        <div class="progress-table">
+                        <div id="skillTable" class="progress-table">
                             <div class="table-head">
                                 <div class="serial">#</div>
                                 <div class="skill">Skills</div>
@@ -260,7 +269,7 @@
                                 onmouseout="imageReset(this)">
                                 <div class="serial">01</div>
                                 <div class="skill"> <img src="img/logo-programming/bootstrap.svg" class="inlineLogo"
-                                        alt="bootstrap">Bootstrap</div>
+                                        alt="bootstrap">Bootstrap <i class="fas fa-trash clickable pl-2" style="display: none; color: red;" onclick="removeSkill(this)"></i></div>
                                 <div class="rating">
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
@@ -273,7 +282,7 @@
                                 onmouseout="imageReset(this)">
                                 <div class="serial">02</div>
                                 <div class="skill"> <img src="img/logo-programming/css3.svg" class="inlineLogo"
-                                        alt="CSS3">CSS3</div>
+                                        alt="CSS3">CSS3 <i class="fas fa-trash clickable pl-2" style="display: none; color: red;" onclick="removeSkill(this)"></i></div>
                                 <div class="rating">
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
@@ -286,7 +295,7 @@
                                 onmouseout="imageReset(this)">
                                 <div class="serial">03</div>
                                 <div class="skill"> <img src="img/logo-programming/docker.svg" class="inlineLogo"
-                                        alt="docker">Docker</div>
+                                        alt="docker">Docker <i class="fas fa-trash clickable pl-2" style="display: none; color: red;" onclick="removeSkill(this)"></i></div>
                                 <div class="rating">
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
@@ -299,7 +308,7 @@
                                 onmouseout="imageReset(this)">
                                 <div class="serial">04</div>
                                 <div class="skill"> <img src="img/logo-programming/git.svg" class="inlineLogo"
-                                        alt="GIT">Git</div>
+                                        alt="GIT">Git <i class="fas fa-trash clickable pl-2" style="display: none; color: red;" onclick="removeSkill(this)"></i></div>
                                 <div class="rating">
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
@@ -312,7 +321,7 @@
                                 onmouseout="imageReset(this)">
                                 <div class="serial">05</div>
                                 <div class="skill"> <img src="img/logo-programming/go.svg" class="inlineLogo"
-                                        alt="golang">Golang</div>
+                                        alt="golang">Golang <i class="fas fa-trash clickable pl-2" style="display: none; color: red;" onclick="removeSkill(this)"></i></div>
                                 <div class="rating">
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
@@ -325,7 +334,7 @@
                                 onmouseout="imageReset(this)">
                                 <div class="serial">06</div>
                                 <div class="skill"> <img src="img/logo-programming/html5.png" class="inlineLogo"
-                                        alt="HTML5">HTML5</div>
+                                        alt="HTML5">HTML5 <i class="fas fa-trash clickable pl-2" style="display: none; color: red;" onclick="removeSkill(this)"></i></div>
                                 <div class="rating">
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
@@ -338,7 +347,7 @@
                                 onmouseout="imageReset(this)">
                                 <div class="serial">07</div>
                                 <div class="skill"> <img src="img/logo-programming/javascript.png" class="inlineLogo"
-                                        alt="JS">JavaScript</div>
+                                        alt="JS">JavaScript <i class="fas fa-trash clickable pl-2" style="display: none; color: red;" onclick="removeSkill(this)"></i></div>
                                 <div class="rating">
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
@@ -351,7 +360,7 @@
                                 onmouseout="imageReset(this)">
                                 <div class="serial">08</div>
                                 <div class="skill"> <img src="img/logo-programming/jquery.svg" class="inlineLogo"
-                                        alt="jquery">Jquery</div>
+                                        alt="jquery">Jquery <i class="fas fa-trash clickable pl-2" style="display: none; color: red;" onclick="removeSkill(this)"></i></div>
                                 <div class="rating">
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
@@ -364,7 +373,7 @@
                                 onmouseout="imageReset(this)">
                                 <div class="serial">09</div>
                                 <div class="skill"> <img src="img/logo-programming/mongodb.svg" class="inlineLogo"
-                                        alt="MongoDB">MongoDB</div>
+                                        alt="MongoDB">MongoDB <i class="fas fa-trash clickable pl-2" style="display: none; color: red;" onclick="removeSkill(this)"></i></div>
                                 <div class="rating">
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
@@ -377,7 +386,7 @@
                                 onmouseout="imageReset(this)">
                                 <div class="serial">10</div>
                                 <div class="skill"> <img src="img/logo-programming/mysql.svg" class="inlineLogo"
-                                        alt="mysql">MySQL</div>
+                                        alt="mysql">MySQL <i class="fas fa-trash clickable pl-2" style="display: none; color: red;" onclick="removeSkill(this)"></i></div>
                                 <div class="rating">
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
@@ -390,7 +399,7 @@
                                 onmouseout="imageReset(this)">
                                 <div class="serial">11</div>
                                 <div class="skill"> <img src="img/logo-programming/python.png" class="inlineLogo"
-                                        alt="Python">Python</div>
+                                        alt="Python">Python <i class="fas fa-trash clickable pl-2" style="display: none; color: red;" onclick="removeSkill(this)"></i></div>
                                 <div class="rating">
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
@@ -403,7 +412,7 @@
                                 onmouseout="imageReset(this)">
                                 <div class="serial">12</div>
                                 <div class="skill"> <img src="img/logo-programming/react.svg" class="inlineLogo"
-                                        alt="ReactJS">ReactJS</div>
+                                        alt="ReactJS">ReactJS <i class="fas fa-trash clickable pl-2" style="display: none; color: red;" onclick="removeSkill(this)"></i></div>
                                 <div class="rating">
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
@@ -416,7 +425,7 @@
                                 onmouseout="imageReset(this)">
                                 <div class="serial">13</div>
                                 <div class="skill"> <img src="img/logo-programming/redux.svg" class="inlineLogo"
-                                        alt="Redux">Redux</div>
+                                        alt="Redux">Redux <i class="fas fa-trash clickable pl-2" style="display: none; color: red;" onclick="removeSkill(this)"></i></div>
                                 <div class="rating">
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
@@ -429,7 +438,7 @@
                                 onmouseout="imageReset(this)">
                                 <div class="serial">14</div>
                                 <div class="skill"> <img src="img/logo-programming/sketch.svg" class="inlineLogo"
-                                        alt="Sketch">Sketch</div>
+                                        alt="Sketch">Sketch <i class="fas fa-trash clickable pl-2" style="display: none; color: red;" onclick="removeSkill(this)"></i></div>
                                 <div class="rating">
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
@@ -442,7 +451,7 @@
                                 onmouseout="imageReset(this)">
                                 <div class="serial">15</div>
                                 <div class="skill"> <img src="img/logo-programming/vuejs.svg" class="inlineLogo"
-                                        alt="VueJS">VueJS</div>
+                                        alt="VueJS">VueJS <i class="fas fa-trash clickable pl-2" style="display: none; color: red;" onclick="removeSkill(this)"></i></div>
                                 <div class="rating">
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
@@ -455,7 +464,7 @@
                                 onmouseout="imageReset(this)">
                                 <div class="serial">16</div>
                                 <div class="skill"> <img src="img/logo-programming/webpack.svg" class="inlineLogo"
-                                        alt="Webpack">Webpack</div>
+                                        alt="Webpack">Webpack <i class="fas fa-trash clickable pl-2" style="display: none; color: red;" onclick="removeSkill(this)"></i></div>
                                 <div class="rating">
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
@@ -468,7 +477,7 @@
                                 onmouseout="imageReset(this)">
                                 <div class="serial">17</div>
                                 <div class="skill"> <img src="img/logo-programming/wordpress.svg" class="inlineLogo"
-                                        alt="Wordpress">Wordpress</div>
+                                        alt="Wordpress">Wordpress <i class="fas fa-trash clickable pl-2" style="display: none; color: red;" onclick="removeSkill(this)"></i></div>
                                 <div class="rating">
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
@@ -477,10 +486,11 @@
                                     <i class="far fa-star"></i>
                                 </div>
                             </div>
-                            <div class="table-row justifyCenter" onmouseover="imageEnlarge(this)"
-                                onmouseout="imageReset(this)">
+                            <div class="table-row justifyCenter clickable highlightClickable" onmouseover="imageEnlarge(this)"
+                                onmouseout="imageReset(this)" onclick="addSkill()">
                                 <div class="serial">...</div>
-                                <div class="skill">More</div>
+                                <div class="skill"> <img src="img/logo-programming/devicon.svg" class="inlineLogo"
+                                    alt="more">Click for Add More Skill</div>
                                 <div class="rating">
                                     <i class="far fa-star"></i>
                                     <i class="far fa-star"></i>
