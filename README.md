@@ -4,7 +4,7 @@ An Example Resume Web Page Project for **Code Camp 2019**, using only **HTML, JS
 
 ## Demo
 
-[https://buildingwatsize.github.io/example-resume-code-camp-2019/](https://buildingwatsize.github.io/example-resume-code-camp-2019/)
+[https://buildingwatsize.github.io/example-resume-code-camp-2019/index.html](https://buildingwatsize.github.io/example-resume-code-camp-2019/index.html)
 
 ## Source-Code
 
